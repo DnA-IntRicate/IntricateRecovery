@@ -1,24 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <array>
-#include <vector>
-#include <unordered_map>
-
-#ifndef NOMINMAX
-    #define NOMINMAX
-#endif
-
-#ifndef _WIN32_LEAN_AND_MEAN
-    #define _WIN32_LEAN_AND_MEAN
-    #include <Windows.h>
-    #include <PortableDeviceApi.h>
-    #include <PortableDevice.h>
-#endif
+#include <irpch.hpp>
 
 static const char* jpg_signature = "\xFF\xD8\xFF\xE0";  // JPEG signature
 static const char* png_signature = "\x89\x50\x4E\x47\x0D\x0A\x1A\x0A"; // PNG signature
