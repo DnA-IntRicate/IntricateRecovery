@@ -40,7 +40,7 @@ configs = ["Debug", "Dev", "Release"]
 default_config = "Dev"
 default_arch = "x64"
 
-[raptor.workspace.executable_projects.IntricateEditor]
+[raptor.workspace.executable_projects.IntricateRecovery]
 dir = "IntricateRecovery"
 language = "cpp"
 arch = "x64"
