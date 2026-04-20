@@ -1,4 +1,4 @@
-include "Vendor/premake/customization/solutionitems.lua"
+include "Tools/Premake/customization/solutionitems.lua"
 include "dependencies.lua"
 
 OUT_DIR = "%{wks.location}/bin/build/%{cfg.system}/%{cfg.architecture}/%{cfg.buildcfg}/Intricate Recovery"
