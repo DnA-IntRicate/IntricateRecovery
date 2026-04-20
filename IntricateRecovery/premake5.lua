@@ -34,10 +34,7 @@ project "IntricateRecovery"
     }
 
     filter "files:not src/**.cpp"
-        flags
-        {
-            "NoPCH"
-        }
+        enablepch "Off"
 
     filter "system:windows"
         cppdialect "C++20"

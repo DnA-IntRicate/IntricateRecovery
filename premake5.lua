@@ -1,4 +1,4 @@
-include "Vendor/premake/customization/solutionitems.lua"
+include "Tools/Premake/customization/solutionitems.lua"
 include "dependencies.lua"
 
 OUT_DIR = "%{wks.location}/bin/build/%{cfg.system}/%{cfg.architecture}/%{cfg.buildcfg}/Intricate Recovery"
@@ -7,6 +7,7 @@ INT_DIR = "%{wks.location}/bin/intermediate/%{cfg.system}/%{cfg.architecture}/%{
 workspace "IntricateRecovery"
     architecture "x86_64"
     startproject "IntricateRecovery"
+    multiprocessorcompile "On"
 
     configurations
     {
@@ -17,12 +18,10 @@ workspace "IntricateRecovery"
 
     solutionitems
     {
-        ".editorconfig"
-    }
-
-    flags
-    {
-        "MultiProcessorCompile"
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "raptor.toml"
     }
 
     defines
@@ -75,19 +74,15 @@ workspace "IntricateRecovery"
         runtime "Release"
         symbols "Off"
         optimize "Full"
+        linktimeoptimization "On"
+        incrementallink "Off"
+        buffersecuritycheck "Off"
+        runtimechecks "Off"
 
         defines
         {
             "INTRICATE_RELEASE",
             "NDEBUG"
-        }
-
-        flags
-        {
-            "NoBufferSecurityCheck",
-            "NoRuntimeChecks",
-            "LinkTimeOptimization",
-            "NoIncrementalLink"
         }
 
 include "IntricateRecovery"

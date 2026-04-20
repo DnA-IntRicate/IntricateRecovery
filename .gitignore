@@ -95,6 +95,7 @@ StyleCopReport.xml
 *.svclog
 *.scc
 *.sln
+*.slnx
 *.vcxproj
 *.csproj
 *.filters
@@ -363,3 +364,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Raptor
+tmp/
+.raptordoctor
