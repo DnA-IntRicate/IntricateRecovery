@@ -4,7 +4,7 @@ version = "1.0.0"
 [raptor.paths]
 docs_dir = "docs"
 temp_dir = "tmp"
-tools_dir = ""
+tools_dir = "Tools"
 
 [raptor.setup]
 headless = false
